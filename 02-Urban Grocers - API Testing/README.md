@@ -45,10 +45,10 @@ Testing included:
 
 ## Artifacts
 
-- Test cases covering positive, negative, boundary, and equivalence scenarios
-- API request and response evidence
-- Bug reports documented in Jira
-- Screenshots supporting reported defects
+- [Test Cases](./Evidence/Test%20Cases.pdf) — Test cases covering positive, negative, boundary, and equivalence scenarios.
+- [Jira Bugs](./Evidence/JiraBugs.png) — Evidence of reported defects and their prioritization.
+- [POST /api/v1/kits/:id/products](./Evidence/post%20kit.png) — API request and response evidence for product and quantity validation.
+- [POST /order-and-go/v1/delivery](./Evidence/order%20and%20go.png) — API request and response evidence for delivery validation and business rules.
 
 ## Key Decisions
 
@@ -69,7 +69,3 @@ The testing identified multiple defects involving:
 - Business rules not being properly enforced
 
 The defects were documented in Jira with reproduction steps, expected and actual results, and supporting evidence.
-
-## What I Would Improve
-
-For a future iteration, I would expand automated API coverage for the most critical validation and business-rule scenarios and add automated regression checks for previously identified defects.
