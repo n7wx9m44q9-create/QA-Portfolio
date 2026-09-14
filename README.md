@@ -22,13 +22,13 @@ End-to-end testing of a web-based scooter rental application.
 
 ---
 
-### 02 — [Project Name]
+### 02 — Urban Grocers | API Testing
 
-[Short description of the project.]
+API testing of product, kit, and delivery functionality, with a focus on validation, business rules, and response behavior.
 
-**Focus:** [Testing areas and tools]
+**Focus:** API Testing · Boundary Value Analysis · Equivalence Partitioning · JSON Validation · Business Rules · Bug Reporting
 
-[View Project](./02-Project-Name)
+[View Project](./02-Urban%20Grocers%20-%20API%20Testing)
 
 ---
 
