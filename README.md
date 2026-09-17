@@ -34,19 +34,14 @@ API testing of product, kit, and delivery functionality, with a focus on validat
 
 ## Projects in Progress
 
-### 03 — Bemol | Localization QA
-
-Localization-focused testing of a musical application, with emphasis on Spanish language quality, terminology, UI text, and user experience.
-
-**Focus:** Localization QA · Linguistic Testing · UI Testing · Music Software
-
----
-
-### 04 — Game Localization QA
+### 03 — The Battle for Westnoth | Game Localization QA
 
 A personal LQA project focused on evaluating the Spanish localization of a video game.
 
-**Focus:** Game QA · Localization QA · Linguistic Testing · Cultural Validation · UI & Audio
+**Focus:** Game Testing · Localization QA · Linguistic Testing · Cultural Validation · UI & Audio
+
+---
+
 
 ## Skills & Tools
 
