@@ -74,8 +74,19 @@ The project will be performed in several stages:
 - [Bug Report Template](06-bug-report-template.md)
 - [Terminology Glossary](07-glossary.md)
 
-## Status
 
-**Status:** In Progress
+## Testing Status
 
-The initial documentation and test strategy are being prepared before exploratory testing begins.
+### Completed
+- Tutorial Campaign — exploratory localization testing
+- Spanish localization review
+- English → Spanish comparison
+- Player-address consistency review
+- Main-menu tips review
+- Terminology validation
+- Investigated and rejected localization candidates
+
+### Current Findings
+- 3 confirmed localization defects
+- Multiple investigated candidates rejected after validation
+- Additional campaign testing in progress
