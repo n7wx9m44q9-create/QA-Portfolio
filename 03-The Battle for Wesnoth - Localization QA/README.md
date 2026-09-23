@@ -75,18 +75,17 @@ The project will be performed in several stages:
 - [Terminology Glossary](07-glossary.md)
 
 
-## Testing Status
+## Project Status
 
-### Completed
-- Tutorial Campaign — exploratory localization testing
-- Spanish localization review
+Completed
+
+The project resulted in:
+
+- 4 confirmed localization defects
+- 8 localization observations documented as improvement opportunities
+- 16 investigated and discarded candidates
 - English → Spanish comparison
-- Player-address consistency review
-- Main-menu tips review
-- Terminology validation
-- Investigated and rejected localization candidates
-
-### Current Findings
-- 3 confirmed localization defects
-- Multiple investigated candidates rejected after validation
-- Additional campaign testing in progress
+- Exploratory localization testing
+- UI localization review
+- Terminology and register validation
+- Save/load and autosave verification
