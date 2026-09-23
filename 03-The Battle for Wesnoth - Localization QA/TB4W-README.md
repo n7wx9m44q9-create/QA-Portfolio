@@ -112,4 +112,4 @@ Interested in trying the game or exploring the project?
 - **[Download The Battle for Wesnoth](https://www.wesnoth.org/)**
 - **[Official GitHub Repository](https://github.com/wesnoth/wesnoth)**
 
-The game is open source and available for Windows, macOS, and Linux. :chatgpt-content-reference{index="1"}
+The game is open source and available for Windows, macOS, and Linux.
