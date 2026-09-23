@@ -100,3 +100,16 @@ Screenshots supporting the four confirmed defects are available in the [`Evidenc
 This was an **independent portfolio project** created to demonstrate practical QA and Localization QA skills.
 
 It was not performed as part of the official development or QA team of The Battle for Wesnoth.
+
+---
+
+## About The Battle for Wesnoth
+
+Special thanks to the **The Battle for Wesnoth** open-source community for creating and maintaining the game that served as the subject of this independent QA case study.
+
+Interested in trying the game or exploring the project?
+
+- **[Download The Battle for Wesnoth](https://www.wesnoth.org/)**
+- **[Official GitHub Repository](https://github.com/wesnoth/wesnoth)**
+
+The game is open source and available for Windows, macOS, and Linux. :chatgpt-content-reference{index="1"}
