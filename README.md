@@ -41,6 +41,7 @@ Independent localization QA case study evaluating the English → Spanish locali
 **Focus:** Localization QA · Exploratory Testing · Linguistic Validation · Terminology Analysis · UI Localization · Defect Documentation
 
 [View Project →](03-The%20Battle%20for%20Wesnoth%20-%20Localization%20QA) 
+
 ---
 
 
