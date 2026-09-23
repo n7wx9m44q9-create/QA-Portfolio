@@ -32,14 +32,15 @@ API testing of product, kit, and delivery functionality, with a focus on validat
 
 ---
 
-## Projects in Progress
+### 03 — The Battle for Wesnoth | Game Localization QA
 
-### 03 — The Battle for Westnoth | Game Localization QA
+Independent localization QA case study evaluating the English → Spanish localization of a video game, with a focus on linguistic accuracy, terminology, register consistency, contextual meaning, and UI text presentation.
 
-A personal LQA project focused on evaluating the Spanish localization of a video game.
+**Results:** 4 confirmed localization defects · 8 localization observations · 16 investigated and discarded cases
 
-**Focus:** Game Testing · Localization QA · Linguistic Testing · Cultural Validation · UI & Audio
+**Focus:** Localization QA · Exploratory Testing · Linguistic Validation · Terminology Analysis · UI Localization · Defect Documentation
 
+[View Project →](03-The%20Battle%20for%20Wesnoth%20-%20Localization%20QA) 
 ---
 
 
