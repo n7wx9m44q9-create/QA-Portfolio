@@ -2,17 +2,17 @@
 
 ## Purpose
 
-This document records cases that initially appeared suspicious during exploratory localization testing but were investigated and intentionally not reported as defects.
+This document records cases that initially appeared suspicious during exploratory testing but were investigated and intentionally not reported as defects.
 
 Each case was evaluated using:
 
 **Observation → Investigation → Finding → Decision**
 
-The purpose is to demonstrate that potentially unusual wording or behavior was not automatically classified as a defect without sufficient evidence.
+The purpose is to demonstrate that potentially unusual wording, terminology, or behavior was not automatically classified as a defect without sufficient evidence.
 
 ---
 
-## DISC-001 — "Has de seleccionar un héroe"
+## L10N-DISC-001 — "Has de seleccionar un héroe"
 
 ### Observation
 
@@ -26,7 +26,7 @@ The wording initially appeared unusual compared with more common modern Spanish 
 
 The expression `has de + infinitive` was reviewed in context.
 
-It is grammatically valid Spanish and can be used to express obligation. The formal or slightly archaic tone is also compatible with the fantasy setting.
+It is grammatically valid Spanish and can express obligation. Its slightly formal or archaic tone is also compatible with the fantasy setting.
 
 ### Decision
 
@@ -36,7 +36,7 @@ No objective linguistic error was identified.
 
 ---
 
-## DISC-002 — "Torreón" as translation of "keep"
+## L10N-DISC-002 — "Torreón" as translation of "keep"
 
 ### Observation
 
@@ -44,7 +44,7 @@ The term `torreón` was initially considered potentially inconsistent as a trans
 
 ### Investigation
 
-The term was evaluated within the game's medieval/fantasy context and surrounding terminology.
+The term was evaluated within the medieval/fantasy context and surrounding terminology.
 
 `Torreón` is a valid Spanish word associated with a fortified tower or strong defensive structure and can function appropriately in this context.
 
@@ -56,7 +56,7 @@ The difference from a possible literal translation does not constitute a localiz
 
 ---
 
-## DISC-003 — Combat damage calculation
+## L10N-DISC-003 — Combat damage calculation
 
 ### Observation
 
@@ -69,7 +69,7 @@ The sequence appeared potentially suspicious because the dialogue described a un
 The calculation was checked:
 
 - Initial HP: 17
-- Damage: 3
+- Damage per attack: 3
 - Five attacks: 3 × 5 = 15
 - Remaining HP: 2
 
@@ -83,7 +83,7 @@ No localization or gameplay inconsistency was found.
 
 ---
 
-## DISC-004 — Lowercase terminology in Help
+## L10N-DISC-004 — Lowercase terminology in Help
 
 ### Observation
 
@@ -109,7 +109,7 @@ No localization defect was identified.
 
 ---
 
-## DISC-005 — "¡este estafermo!" after an ellipsis
+## L10N-DISC-005 — "¡este estafermo!" after an ellipsis
 
 ### Observation
 
@@ -123,7 +123,7 @@ The capitalization initially appeared inconsistent.
 
 The dialogue was reviewed as a continuation across separated text segments.
 
-The lowercase/uppercase appearance could be explained by the way the dialogue was segmented and presented rather than by an incorrect translation.
+The apparent capitalization difference could be explained by the way the dialogue was segmented and presented rather than by an incorrect translation.
 
 ### Decision
 
@@ -133,7 +133,7 @@ The available evidence was insufficient to classify the text as incorrect.
 
 ---
 
-## DISC-006 — "Termina tu turno" vs. "Finalizar turno"
+## L10N-DISC-006 — "Termina tu turno" vs. "Finalizar turno"
 
 ### Observation
 
@@ -167,7 +167,7 @@ The difference is caused by the grammatical function of the source strings and d
 
 ---
 
-## DISC-007 — "Chamana elfa"
+## L10N-DISC-007 — "Chamana elfa"
 
 ### Observation
 
@@ -187,7 +187,7 @@ No correction was justified.
 
 ---
 
-## DISC-008 — "sección Juego de la ayuda"
+## L10N-DISC-008 — "sección Juego de la ayuda"
 
 ### Observation
 
@@ -211,7 +211,7 @@ No localization defect was confirmed.
 
 ---
 
-## DISC-009 — "tú" in Tutorial vs. "usted" in Help
+## L10N-DISC-009 — "tú" in Tutorial vs. "usted" in Help
 
 ### Observation
 
@@ -221,9 +221,9 @@ The Tutorial primarily addresses the player using informal `tú`, while some Hel
 
 The two areas were evaluated as different content contexts.
 
-The Tutorial uses direct instructional/player-facing language, while the Help content may use a different editorial register.
+The Tutorial uses direct instructional/player-facing language, while Help content may use a different editorial register.
 
-No mixed register was identified within the same individual Tutorial text as a general rule.
+No mixed register was identified within the same Tutorial text as a general pattern.
 
 ### Decision
 
@@ -233,7 +233,7 @@ The difference between sections alone is not sufficient evidence of a localizati
 
 ---
 
-## DISC-010 — "legal", "caótico" and "neutral"
+## L10N-DISC-010 — "legal", "caótico" and "neutral"
 
 ### Observation
 
@@ -259,7 +259,7 @@ No correction was justified.
 
 ---
 
-## DISC-011 — "dificultad fácil" vs. "nivel Principiante"
+## L10N-DISC-011 — "dificultad fácil" vs. "nivel Principiante"
 
 ### Observation
 
@@ -277,7 +277,7 @@ The difference initially appeared to indicate inconsistent difficulty terminolog
 
 The surrounding interface and campaign information were reviewed.
 
-The terms refer to different concepts: difficulty and campaign/scenario level classification are not necessarily the same attribute.
+The terms refer to different concepts. Difficulty and campaign/scenario level classification are not necessarily the same attribute.
 
 ### Decision
 
@@ -287,7 +287,7 @@ The presence of different terms does not by itself represent an inconsistency.
 
 ---
 
-## DISC-012 — Different register between Main Menu tips
+## L10N-DISC-012 — Different register between Main Menu tips
 
 ### Observation
 
@@ -299,19 +299,19 @@ This initially suggested inconsistent use of `tú` and `usted`.
 
 The tips were navigated individually using the available Previous/Next controls.
 
-The review showed that register can vary from one message to another, but the messages themselves are generally internally consistent.
+The review showed that register can vary from one independent message to another, but the messages themselves were generally internally consistent.
 
-One specific tip did contain a confirmed mixed-register defect and was reported separately as **L10N-003**.
+One specific tip did contain a mixed-register defect and was reported separately as **L10N-003**.
 
 ### Decision
 
 **Discarded as a general pattern — contextual variation.**
 
-Variation between independent messages was not treated as a defect. Only the message containing a mixed register within the same sentence was elevated to a bug.
+Variation between independent messages was not treated as a defect. Only the message containing a mixed register within the same message was elevated to a bug.
 
 ---
 
-## DISC-013 — "Tienda de campamento (C..."
+## L10N-DISC-013 — "Tienda de campamento (C..."
 
 ### Observation
 
@@ -335,7 +335,7 @@ The behavior is a UI presentation decision rather than a confirmed localization 
 
 ---
 
-## DISC-014 — Truncated terrain names in Help navigation
+## L10N-DISC-014 — Truncated terrain names in Help navigation
 
 ### Observation
 
@@ -343,7 +343,7 @@ Several terrain names in the Help navigation were displayed in shortened form.
 
 ### Investigation
 
-The selected entry was opened and the complete name was displayed in the main content area.
+The selected entries were opened individually and the complete names were displayed in the main content area.
 
 The truncation therefore does not remove access to the complete terminology.
 
@@ -355,7 +355,7 @@ The navigation could potentially be improved for distinguishability, but the obs
 
 ---
 
-## DISC-015 — Save, Load and Autosave functionality
+## L10N-DISC-015 — Save, Load and Autosave functionality
 
 ### Observation
 
@@ -375,7 +375,7 @@ The tested save-related functions worked as expected.
 
 ---
 
-## DISC-016 — Dead character speaking after reaching 0 HP
+## L10N-DISC-016 — Character dialogue after reaching 0 HP
 
 ### Observation
 
@@ -416,4 +416,6 @@ A case was discarded when investigation showed one or more of the following:
 - the issue was subjective or dependent on regional preference;
 - or there was insufficient evidence to establish a reproducible defect.
 
-Discarding a case does not mean that the wording or behavior could never be improved. It means that the available evidence did not justify reporting it as a defect within the scope of this QA cycle.
+Discarding a case does not mean that the wording or behavior could never be improved.
+
+It means that the available evidence did not justify reporting it as a defect within the scope of this QA cycle.
