@@ -1,91 +1,161 @@
-# The Battle for Wesnoth — Localization QA
+# The Battle for Wesnoth — Game Localization QA
 
-Personal QA project focused on evaluating the Spanish localization of **The Battle for Wesnoth**, an open-source turn-based tactical strategy game.
+Independent QA project focused on evaluating the **English → Spanish localization** of *The Battle for Wesnoth*, an open-source turn-based tactical strategy game.
 
-## Project Objective
+The project was conducted independently as a portfolio case study, with emphasis on **localization quality, linguistic accuracy, terminology, register consistency, contextual meaning, and UI text presentation**.
 
-Evaluate the quality of the English → Spanish localization of the **Tutorial Campaign**, with emphasis on linguistic accuracy, terminology consistency, contextual correctness, and UI presentation.
+---
 
-The project combines exploratory testing in English and Spanish with structured localization testing.
+## Project Overview
 
-## Scope
+**Game:** The Battle for Wesnoth  
+**Version:** 1.18.8  
+**Target language:** Spanish  
+**Testing type:** Localization QA / Exploratory Testing  
+**Project status:** Completed
 
-### In Scope
+### Coverage
 
-- Tutorial Campaign
-- English → Spanish localization
-- Dialogues and narrative text
-- Tutorial instructions
-- Objectives and messages
-- Relevant UI elements
-- Unit, character, faction, and location terminology
-- Translation accuracy
-- Grammar and spelling
-- Terminology consistency
-- Contextual correctness
-- Spanish-specific UI issues
-- Text truncation and overflow
-- Character and punctuation issues
-- Consistency of player address and register
+Testing focused primarily on the **Tutorial Campaign**, with additional exploratory coverage of selected content from **A Tale of Two Brothers**.
 
-### Out of Scope
+The investigation included:
 
-- Random gameplay tips displayed at startup
-- Other campaigns
-- Multiplayer
-- Map editor
-- User-made content and add-ons
-- Other platforms
-- Other target languages
+- Tutorial dialogue and instructions
+- Scenario victory and defeat messages
+- Main Menu gameplay tips
+- Help documentation
+- Unit, faction, terrain, and game terminology
+- Player-address and register consistency
+- Grammar and punctuation
+- Translation accuracy and contextual meaning
+- UI text, truncation, and readability
+- Save, load, and autosave functionality
 
-## Testing Approach
+---
 
-The project will be performed in several stages:
+# Results
 
-1. **Exploratory testing in English**
-   - Understand the Tutorial flow.
-   - Identify scenarios, mechanics, characters, units, instructions, and relevant UI.
-   - Establish a practical reference for expected behavior.
+The investigation produced three types of findings:
 
-2. **Exploratory testing in Spanish**
-   - Repeat the relevant Tutorial flow.
-   - Identify visible differences and localization issues.
+| Result | Count |
+|---|---:|
+| Confirmed localization defects | **4** |
+| Localization observations / improvement opportunities | **8** |
+| Investigated and discarded candidates | **16** |
 
-3. **English → Spanish comparison**
-   - Compare original and localized text in context.
-   - Evaluate meaning, terminology, grammar, and consistency.
+### Confirmed defects
 
-4. **UI Localization testing**
-   - Check text visibility, truncation, overflow, layout, characters, and readability.
+All four confirmed defects were reproducible and supported by contextual or source-text evidence.
 
-5. **Bug validation and reporting**
-   - Reproduce identified issues.
-   - Document actual and expected results.
-   - Provide the English source text and Spanish translation when relevant.
-   - Attach evidence.
+| ID | Area | Issue |
+|---|---|---|
+| **L10N-001** | Tutorial | Inconsistent and ambiguous player address in defeat message |
+| **L10N-002** | Tutorial | Ambiguous and inconsistent player address in victory message |
+| **L10N-003** | Main Menu Tips | Mixed informal and formal player address |
+| **L10N-004** | Campaign Dialogue | Incorrect question punctuation and missing definite article |
 
-## Testing Artifacts
+→ **[View confirmed bugs](Bugs.md)**
 
-- [Project Scope](01-scope.md)
-- [Test Strategy](02-test-strategy.md)
-- [Exploratory Testing Notes](03-exploratory-testing.md)
-- [Localization Checklist](04-localization-checklist.md)
-- [Test Cases](05-test-cases.md)
-- [Bug Report Template](06-bug-report-template.md)
-- [Terminology Glossary](07-glossary.md)
+---
 
+## Localization Observations
 
-## Project Status
+Several findings represented possible improvements in wording, clarity, or UX but did not meet the evidence threshold required to classify them as defects.
 
-Completed
+These included:
 
-The project resulted in:
+- ambiguous UI wording;
+- awkward sentence construction;
+- literal-sounding dialogue;
+- victory-summary wording;
+- controlled text truncation;
+- and regional language considerations.
 
-- 4 confirmed localization defects
-- 8 localization observations documented as improvement opportunities
-- 16 investigated and discarded candidates
-- English → Spanish comparison
-- Exploratory localization testing
+→ **[View localization observations](Localization-Observations.md)**
+
+---
+
+## Discarded Cases
+
+Potential issues were investigated before deciding whether to report them.
+
+Cases were discarded when the wording was valid, terminology was established, behavior was contextually correct, or available evidence was insufficient to support a defect.
+
+Examples included:
+
+- fantasy terminology such as `torreón`;
+- `Chamana elfa`;
+- `has de seleccionar un héroe`;
+- `Termina tu turno` vs. `Finalizar turno`;
+- differences between `tú` and `usted` across separate content contexts;
+- controlled UI truncation;
+- and save/load/autosave behavior.
+
+→ **[View investigated and discarded cases](Discarded-Cases.md)**
+
+---
+
+# QA Approach
+
+The investigation followed an evidence-based exploratory approach rather than treating every unusual translation as a defect.
+
+### 1. Explore
+
+The game was explored in English and Spanish to understand the relevant game context, dialogue, UI, terminology, and player-facing content.
+
+### 2. Compare
+
+Spanish strings were compared with the English source where available, while also considering the surrounding game context.
+
+### 3. Validate
+
+Potential issues were checked for:
+
+- grammatical correctness;
+- semantic accuracy;
+- terminology consistency;
+- player-address consistency;
+- UI behavior;
+- reproducibility;
+- and contextual appropriateness.
+
+### 4. Classify
+
+Each finding was classified as one of:
+
+**Confirmed defect → Localization observation → Discarded case**
+
+This prevented subjective wording preferences from being reported as bugs without sufficient evidence.
+
+---
+
+# Key QA Takeaways
+
+This project demonstrates practical experience with:
+
+- Exploratory testing
+- Localization QA
+- English → Spanish source comparison
+- Linguistic and grammatical validation
+- Terminology analysis
+- Register and consistency testing
 - UI localization review
-- Terminology and register validation
-- Save/load and autosave verification
+- Defect reproduction and documentation
+- Evidence-based defect classification
+- Distinguishing defects from wording improvements and false positives
+
+A key part of the investigation was **knowing when not to report an issue**. Potentially unusual wording was investigated in context before being classified, helping avoid false positives and unsupported defect reports.
+
+---
+
+## Evidence
+
+Screenshots supporting the confirmed defects are available in the [`Evidence`](Evidence/) folder.
+
+---
+
+## Project Context
+
+This was an **independent portfolio project**, not a production assignment or contribution to the game's development team.
+
+The objective was to simulate a realistic localization QA investigation and document the reasoning, findings, and evidence in a format suitable for professional QA work.
