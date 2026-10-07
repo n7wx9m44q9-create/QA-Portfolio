@@ -102,3 +102,7 @@ Escuela de Música del Estado de Hidalgo (EMEH)
 **LinkedIn:** [linkedin.com/in/dan-celis](https://www.linkedin.com/in/dan-celis)
 
 **Email:** dancelis@icloud.com
+
+## My musical side.
+
+Check my Musical Portfolio [https://github.com/n7wx9m44q9-create/dan-celis-music-portfolio] 
