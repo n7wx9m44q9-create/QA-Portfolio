@@ -24,6 +24,26 @@ Estudio de caso independiente de Localization QA (QA de localización) y Agentic
 
 El Proyecto 04 amplía el trabajo del Proyecto 03 con un alcance acotado al editor de mapas y hace visible la supervisión humana del flujo agéntico.
 
+## Justificación del proyecto
+
+La elección de *The Battle for Wesnoth* responde a la posibilidad de abordar un problema real de Localization QA dentro de un proyecto de software de código abierto. Su catálogo de traducciones, plantilla original y código fuente permiten contrastar las cadenas en español con el contenido inglés y analizar su contexto de implementación, en lugar de limitar la revisión a una comparación lingüística aislada.
+
+El editor de mapas (`wesnoth-editor`) ofreció un alcance concreto y manejable para realizar una auditoría sistemática. Además, permitió combinar distintos criterios de calidad: precisión semántica, naturalidad, coherencia terminológica, integridad de placeholders, escapes y adecuación al contexto de interfaz.
+
+### Auditoría estática como preparación para el testing en ejecución
+
+Una auditoría previa del repositorio permite identificar y documentar defectos lingüísticos que pueden detectarse sin necesidad de recorrer el juego: traducciones incorrectas, errores gramaticales, inconsistencias terminológicas y problemas de formato o integridad de cadenas.
+
+Esto permite aprovechar mejor las sesiones posteriores de gameplay testing. En lugar de dedicar tiempo de ejecución a descubrir problemas que ya podían identificarse mediante el análisis del catálogo y el código, el tester puede concentrarse en evaluar la experiencia de juego, los flujos, la comprensión de instrucciones y mensajes en contexto, así como otros defectos de interfaz que requieren observación visual o ejecución real.
+
+Entre estos últimos se encuentran los textos truncados, desbordamientos, superposiciones, saltos de línea inadecuados y elementos poco visibles. La auditoría estática no sustituye la validación en ejecución: ambas actividades se complementan y permiten cubrir diferentes dimensiones de calidad.
+
+### Aplicación de Agentic QA
+
+El proyecto también se planteó como un ejercicio práctico de Agentic QA. El objetivo no era delegar toda la auditoría al agente ni aceptar sus resultados automáticamente, sino evaluar su capacidad para explorar un repositorio, identificar posibles defectos, consultar el código y documentar sus propuestas.
+
+La revisión humana permitió contrastar esos resultados, aportar contexto visual, corregir interpretaciones y tomar las decisiones finales. De esta manera, el trabajo permite demostrar dos competencias complementarias: la aplicación de criterios de Localization QA y la capacidad de dirigir, supervisar y evaluar el trabajo de un agente, reconociendo tanto sus aportaciones como sus limitaciones.
+
 ## Objetivo y alcance
 
 Revisar el catálogo español del dominio wesnoth-editor contra el original inglés y el código de la misma versión. Se cubrieron 10 entradas en el piloto y las 112 entradas vigentes restantes en la auditoría extendida: 122 entradas únicas en total. La revisión consideró sentido, gramática, puntuación, terminología, placeholders, escapes y contexto de interfaz.
@@ -32,7 +52,7 @@ El inventario distingue 122 entradas vigentes de 39 obsoletas; las 122 vigentes 
 
 ## Materiales y metodología
 
-Se consultaron el catálogo español `po/wesnoth-editor/es.po`, la plantilla inglesa `po/wesnoth-editor/wesnoth-editor.pot` y el código fuente del commit fijado en la ficha. También se revisaron las dos capturas de interfaz aportadas por la persona usuaria. La revisión fue estática: se compararon cadenas y contexto de código, se comprobaron concordancia, terminología, puntuación, placeholders, escapes y consistencia, y se registraron entradas sin problema identificado. Las capturas sirvieron para validar el uso visible de términos y la jerarquía del menú.
+Se consultaron el catálogo español `po/wesnoth-editor/es.po`, la plantilla inglesa `po/wesnoth-editor/wesnoth-editor.pot` y el código fuente del commit fijado en la ficha. También se revisaron las dos capturas de interfaz aportadas por el usuario. La revisión fue estática: se compararon cadenas y contexto de código, se comprobaron concordancia, terminología, puntuación, placeholders, escapes y consistencia, y se registraron entradas sin problema identificado. Las capturas sirvieron para validar el uso visible de términos y la jerarquía del menú.
 
 ## Resultado final con validación humana
 
@@ -73,7 +93,7 @@ Se conservaron convenciones útiles del Proyecto 03: ficha de alcance, resumen d
 
 **Tareas del agente:** exploró el snapshot y localizó las cadenas; comparó originales y traducciones; revisó placeholders, escapes, puntuación y consistencia; consultó el código y la configuración para entender el contexto; y documentó candidatos y entradas sin defecto identificado.
 
-**Supervisión humana:** la persona usuaria validó o rechazó candidatos, decidió la terminología y naturalidad de las propuestas, aportó las capturas, corrigió propuestas y determinó qué registrar como bug o sugerencia. Fijó “planificación de fases horarias” para ME-002 y “franja horaria” para ME-004; confirmó ME-009 como defecto de la traducción española y dejó la elipsis inglesa como consulta separada; y descartó el registro 087 como bug.
+**Supervisión humana:** el usuario validó o rechazó candidatos, decidió la terminología y naturalidad de las propuestas, aportó las capturas, corrigió propuestas y determinó qué registrar como bug o sugerencia. Fijó “planificación de fases horarias” para ME-002 y “franja horaria” para ME-004; confirmó ME-009 como defecto de la traducción española y dejando la elipsis inglesa como consulta separada y descartó el registro 087 como bug.
 
 **Evaluación:** el agente resolvió correctamente la localización y comparación estructural de las cadenas, detectó varios problemas lingüísticos y de placeholders, y consultó el código pertinente. No determinó por sí solo la terminología preferida, la naturalidad contextual de ME-004 ni el alcance de ME-009; esas propuestas requirieron criterio y evidencia visual humanos. El análisis estático tampoco permitió comprobar cómo se muestran todas las cadenas en ejecución ni confirmar efectos funcionales. La retroalimentación humana cambió la propuesta de ME-004, confirmó ME-009 dentro de Localization QA, separó la sugerencia inglesa de UX Writing y mantuvo el registro 087 fuera del conteo.
 
