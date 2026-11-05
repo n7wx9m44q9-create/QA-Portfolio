@@ -1,6 +1,6 @@
 # Proyecto 04 — The Battle for Wesnoth: Agentic Localization QA
 
-                             ![Cabecera de The Battle for Wesnoth sobre un mapa del juego](header.jpg)
+  ![Cabecera de The Battle for Wesnoth sobre un mapa del juego](header.jpg)
 
 Estudio de caso independiente de Localization QA (QA de localización) y Agentic QA (QA con apoyo de un agente), centrado en la interfaz del editor de mapas de *The Battle for Wesnoth*. El trabajo combina comparación de catálogo y código fuente con revisión humana y evidencia visual contextual.
 
